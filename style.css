@@ -1,0 +1,317 @@
+/* ===== General ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background: #f4f6f9;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+#hero h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+#hero p {
+  font-size: 22px;
+  margin-bottom: 25px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#hero a.button {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 20px;
+  background: #fff;
+  color: #00bcd4;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#hero a.button:hover {
+  background: #00bcd4;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ===== Planes Flying ===== */
+.plane-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.plane {
+  position: absolute;
+  width: 80px;
+  opacity: 0.8;
+  transform: rotate(0deg);
+}
+
+.plane1 { animation: fly1 15s linear infinite; top: 20%; left: -10%; }
+.plane2 { animation: fly2 18s linear infinite; top: 50%; left: -15%; }
+.plane3 { animation: fly3 20s linear infinite; top: 70%; left: -20%; }
+
+@keyframes fly1 {
+  0% { left: -10%; transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { left: 110%; transform: rotate(0deg); }
+}
+
+@keyframes fly2 {
+  0% { left: -15%; transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { left: 110%; transform: rotate(-5deg); }
+}
+
+@keyframes fly3 {
+  0% { left: -20%; transform: rotate(0deg); }
+  50% { transform: rotate(-5deg); }
+  100% { left: 110%; transform: rotate(0deg); }
+}
+
+/* ===== About Section ===== */
+#about {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 20px;
+  max-width: 900px;
+}
+
+/* ===== Services Section ===== */
+#services {
+  padding: 80px 20px;
+  background: #e0f7fa;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+
+.service-card p {
+  font-size: 16px;
+}
+
+/* ===== Destinations Section ===== */
+#destinations {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.destinations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.destination-card {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.destination-card:hover img {
+  transform: scale(1.1);
+}
+
+.destination-card h4 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* ===== Footer Adjustments ===== */
+footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px 20px 20px;
+}
+
+footer h2, footer h3 {
+  color: #00bcd4;
+}
+
+footer p, footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #00bcd4;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 900px) {
+  .services-container, .destinations-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero h2 {
+    font-size: 38px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+
+  .destination-card {
+    width: 80%;
+    height: 200px;
+  }
+}
+
+/* ===== Clouds Animation (Fade In/Out + Move) =====
+.cloud-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.cloud {
+  position: absolute;
+  width: 150px;
+  opacity: 0;
+}
+
+/* Cloud 1 */
+/* .cloud1 {
+  top: 10%;
+  left: -200px;
+  animation: cloudMove1 60s linear infinite, cloudFade 4s ease-in-out infinite;
+}
+
+/* Cloud 2 */
+/* .cloud2 {
+  top: 40%;
+  left: -300px;
+  opacity: 0.5;
+  animation: cloudMove2 80s linear infinite, cloudFade 5s ease-in-out infinite;
+} */
+
+/* Cloud 3 */
+/* .cloud3 {
+  top: 70%;
+  left: -250px;
+  opacity: 0.7;
+  animation: cloudMove3 100s linear infinite, cloudFade 6s ease-in-out infinite;
+} */
+
+/* Horizontal movement */
+/* @keyframes cloudMove1 {
+  0% { transform: translateX(-250px); }
+  100% { transform: translateX(120%); }
+}
+@keyframes cloudMove2 {
+  0% { transform: translateX(-300px); }
+  100% { transform: translateX(120%); }
+}
+@keyframes cloudMove3 {
+  0% { transform: translateX(-250px); }
+  100% { transform: translateX(120%); }
+}
+
+/* Fade in/out */
+/* @keyframes cloudFade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+} */ 
