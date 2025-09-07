@@ -1,0 +1,182 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 650px;
+  width: 100%;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+input:focus, select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52,152,219,0.3);
+  outline: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  background: #3498db;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Autocomplete suggestions */
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  display: none;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.suggestions li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestions li:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+/* Status text */
+#status {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #e74c3c;
+  text-align: center;
+}
+
+/* Flight result cards */
+#results {
+  margin-top: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  background: #fefefe;
+  padding: 18px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card .airline {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.card .route {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #34495e;
+}
+
+.card .times, .card .meta {
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.card .price {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media(max-width: 700px){
+  .container {
+    padding: 25px 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
