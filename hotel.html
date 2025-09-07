@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelEase - Hotels</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>TravelEase</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flight.html">Flight</a></li>
+        <li><a href="hotel.html">Hotel</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hotel Search Section -->
+  <section id="hotel-search">
+    <h2>Find Your Perfect Hotel</h2>
+
+    <!-- Location Filter -->
+    <div class="filter-group">
+      <label for="location">Location:</label>
+      <select id="location">
+        <option value="">All Locations</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+      </select>
+    </div>
+
+    <!-- Price Filter -->
+    <div class="filter-group">
+      <label>
+        <input type="checkbox" id="enable-price"> Search by Price
+      </label>
+      <div class="price-buttons">
+        <button class="preset-btn" data-min="0" data-max="1000">0 - 1k</button>
+        <button class="preset-btn" data-min="1000" data-max="5000">1k - 5k</button>
+        <button class="preset-btn" data-min="5000" data-max="10000">5k - 10k</button>
+        <button class="preset-btn" data-min="10000" data-max="20000">10k - 20k</button>
+      </div>
+    </div>
+
+    <!-- Rating Filter -->
+    <div class="filter-group">
+      <label for="rating">Minimum Rating:</label>
+      <select id="rating">
+        <option value="">Any</option>
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="2">2 Stars</option>
+      </select>
+    </div>
+
+    <button id="search-btn">Search Hotels</button>
+  </section>
+
+  <!-- Hotels List -->
+  <section id="hotel-list">
+    <h2>Available Hotels</h2>
+    <div id="hotels-container">
+      <!-- Hotel cards will be dynamically added here using JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Flight Finder</h2>
+        <p>Your ultimate flight search companion. Find the best flights with ease!</p>
+      </div>
+      <div class="footer-center">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Search Flights</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+          <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Flight Finder. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="hotel.js"></script>
+</body>
+</html>
