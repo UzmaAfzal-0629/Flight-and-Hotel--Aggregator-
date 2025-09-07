@@ -1,0 +1,140 @@
+/* ===== General ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f4f8;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-top: 60px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  max-width: 700px;
+  margin: 10px auto 40px auto;
+  color: #555;
+}
+
+/* ===== Contact Form ===== */
+#contact {
+  max-width: 750px;
+  margin: 0 auto 70px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+#contact:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #007BFF;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ===== Submit Button ===== */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(90deg, #007BFF, #00bcd4);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,123,255,0.3);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,123,255,0.35);
+}
+
+/* ===== Status Message ===== */
+#status-msg {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  min-height: 22px;
+  transition: all 0.3s;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+  #contact {
+    margin: 20px;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contact {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
